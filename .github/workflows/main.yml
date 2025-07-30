@@ -1,12 +1,12 @@
-name: Windows RDP
 
-on:
-  workflow_dispatch:
+name: Install RDP
+
+on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Setup RDP
-        run: |
-          curl -s https://raw.githubusercontent.com/CYB3RKING/RDP/main/setup.sh | bash
+      - name: Download script
+        run: curl -s https://raw.githubusercontent.com/CYB3RKING/RDP/main/setup.sh | bash
+    
